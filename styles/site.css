@@ -38,3 +38,24 @@ a {
   font-family: var(--font-serif);
   text-align: center;
 }
+
+.site-section__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.site-section__pet-card {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+}
+
+.site-section__pet-card:hover {
+  border: 1px solid #777;
+}
+
+.site-section__pet-card img {
+  width: 100%;
+  height: auto;
+}
