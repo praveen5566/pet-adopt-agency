@@ -8,8 +8,7 @@ function displayPetCards(dogs) {
       img.id = `petCard__${i}`;
       img.src = dogs[i].image;
       img.alt = dogs[i].source;
-      img.style.width = '300px';
-      img.style.height = '300px';
+      img.setAttribute('class', 'site-section__pet-img')
       wrapperDiv.appendChild(img);
       galleryContainer.appendChild(wrapperDiv);
       displayPetImage(i);
