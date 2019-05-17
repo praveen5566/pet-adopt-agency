@@ -5,8 +5,9 @@ function displayPetCards(dogs) {
       let img = document.createElement('img');
       let wrapperDiv = document.createElement('div');
       wrapperDiv.setAttribute('class', 'site-section__pet-card');
+      let thumbnailUrl = dogs[i].image.replace('/raw/' , '/thumbnail/');
       img.id = `petCard__${i}`;
-      img.src = dogs[i].image;
+      img.src = thumbnailUrl;
       img.alt = dogs[i].source;
       img.setAttribute('class', 'site-section__pet-img')
       wrapperDiv.appendChild(img);
@@ -30,7 +31,7 @@ function displayPetImage(num) {
   let modalInfo = document.getElementById('siteModalInfo');
   img.onclick = function () {
     modal.style.display = 'block';
-    modalImg.src = this.src;
+    modalImg.src = this.src.replace('/thumbnail/','/raw/');
     modalInfo.innerHTML = this.alt;
   }
 
