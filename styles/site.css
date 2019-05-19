@@ -18,6 +18,15 @@ a {
   color: var(--color-link);
 }
 
+#wrapper {
+  min-height: calc(100vh - 70px);
+  text-align: center;
+}
+
+#footer {
+  height: 40px;
+}
+
 /* Snippets */
 .site-header {
   padding-bottom: 2rem;
@@ -34,12 +43,17 @@ a {
 }
 
 .site-footer {
+  margin-top: 2rem;
   color: var(--color);
   font-family: var(--font-serif);
   text-align: center;
 }
 
-.site-section{
+#loadMoreBtn {
+  margin-bottom: 2rem;
+}
+
+.site-section {
   margin: 2rem 1rem;
 }
 
@@ -61,6 +75,18 @@ a {
   opacity: 0.8;
   filter: drop-shadow(8px 8px 10px gray);
   -webkit-filter: drop-shadow(8px 8px 10px gray);
+}
+
+.site-button {
+  padding: 1.1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+}
+
+.site-button:hover {
+  opacity: 0.8;
 }
 
 .site-modal {
