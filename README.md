@@ -1,4 +1,13 @@
-# Asana WebDev Take-Home Exercise
+# Asana WebDev  - PET ADOPTION AGENCY - HTML, CSS, Javascript
+
+## Development Instructions:
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the http server on default port 8080.<br>
+Opens [http://localhost:8080](http://localhost:8080) in the browser automatically.
 
 ## Instructions
 
