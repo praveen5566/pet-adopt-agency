@@ -1,4 +1,4 @@
-# PET ADOPTION AGENCY - 
+# PET ADOPTION AGENCY
 
 Sample pet image gallery using HTML, CSS and Javascript
 
