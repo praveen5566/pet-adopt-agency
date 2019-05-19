@@ -53,6 +53,9 @@ function displayLoadMoreButton(paginatedPetData) {
     if (i < paginatedPetData.length) {
       displayPetCards(paginatedPetData[i++], pageNo);
       pageNo++
+    } else {
+      button.disabled = true;
+      button.innerHTML = 'no more data'
     }
   }
 }

@@ -50,7 +50,10 @@ a {
 }
 
 #loadMoreBtn {
+  width: 50%;
+  font-size: 1rem;
   margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 .site-section {
@@ -79,14 +82,21 @@ a {
 
 .site-button {
   padding: 1.1rem;
-  border-radius: 0.5rem;
+  border: 0;
+  outline: 0;
   cursor: pointer;
-  background-color: gray;
+  background-color: rgb(32, 165, 109);
   color: white;
 }
 
 .site-button:hover {
   opacity: 0.8;
+}
+
+.site-button:disabled {
+  background-color: gray;
+  cursor: not-allowed; 
+  opacity: 1;
 }
 
 .site-modal {
