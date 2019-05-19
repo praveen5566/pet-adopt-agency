@@ -1,6 +1,10 @@
 (function () {
 
-  /* function to fetch text data from source */
+ /**  
+  * function to fetch text data from source.
+  * @param {string}      url        location of html snippet file.
+  * @param {HTMLElement} element    DOM node to load on the page.
+  */
   let fetchHTMLDataFromSource = function (url, element) {
     if (window.fetch) {
       fetch(url).then(response => response.text()).then(data => {
@@ -12,7 +16,9 @@
     }
   }
 
-  /* function to load html snippets */
+ /**  
+  * function to load html snippets.
+  */
   let loadHTMLSnippetsToDOM = function () {
     let snippets = ['header', 'section' ,'button', 'footer', 'modal'];
     for(i=0; i<snippets.length ; i++) {
@@ -22,7 +28,10 @@
 
   loadHTMLSnippetsToDOM();
 
-  /* function to fetch  JSON data from source */
+ /**  
+  * function to fetch  JSON data from source.
+  * @param {string}   url   location of pet JSON file.
+  */
   let fetchJSONDataFromSource = function (url) {
     if (window.fetch) {
       fetch(url).then(response => response.json()).then(data => {
@@ -41,7 +50,11 @@
   
   fetchJSONDataFromSource('/assets/data/dogs.json');
 
-  /* function to display gallery thumbnail cards using pure javascript */
+ /**  
+  * function to display gallery thumbnail cards using pure javascript.
+  * @param {Array}    pets    paginated pet data.
+  * @param {number}   page    page Number.
+  */
   let displayPetCards = function (pets, page) {
     if (pets && pets.length > 0) {
       for (let i = 0; i < pets.length; i++) {
@@ -60,7 +73,11 @@
     }
   }
 
-  /* function to display full size image in a modal */
+ /**  
+  * function to display full size image in a modal.
+  * @param {number}   index   pet index.
+  * @param {number}   page    page Number.
+  */
   let displayPetModal = function (index, page) {
     let modal = document.getElementById('siteModal');
     let img = document.getElementById(`petCard__${index}__page${page}`);
@@ -78,7 +95,11 @@
     }
   }
 
-  /* function to split data into multiple chunks for lazy loading */
+ /**  
+  * function to split data into multiple chunks for lazy loading.
+  * @param   {Array}   pets   flat pet Array.
+  * @returns {Array}   paginated pet Array. 
+  */
   let getPaginatedData = function (pets) {
     let numOfPetsPerPage = 10;
     let paginatedPetData = []
@@ -91,7 +112,10 @@
     return pets;
   }
 
-  /* function to display load more button */
+ /**  
+  * function to display load more button.
+  * @param {Array}  paginatedPetData   paginated pet Array.
+  */
   let displayLoadMoreButton = function (paginatedPetData) {
     let button = document.getElementById('loadMoreBtn');
     let i = 1;
@@ -107,14 +131,19 @@
     }
   }
 
-  /* function to display gallery data with button */
+ /**  
+  * function to display gallery data with button.
+  * @param {Array}  paginatedPetData   paginated pet Array.
+  */
   let displayPetGallery = function (pets) {
     let paginatedPetData = getPaginatedData(pets);
     displayPetCards(paginatedPetData[0], 1);
     displayLoadMoreButton(paginatedPetData);
   }
 
-  /* function to display error message if there is no data available */
+ /**  
+  * function to display error message if there is no data available.
+  */
   let displayNotFoundError = function () {
     let galleryContainer = document.getElementById('galleryContainer');
     const notFoundError = document.createElement('h3');
